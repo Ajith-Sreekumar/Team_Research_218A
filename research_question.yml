@@ -1,0 +1,54 @@
+# This file is in YAML format.  You must ensure that the punctuation
+# and whitespace is preserved.  Do NOT use Windows Notepad to edit this
+# file; use a real programming editor like Notepad++ instead.
+
+# Write your group name exactly as it appears on Canvas.
+group: A218
+
+# Write the names of your group members as a comma-separated list
+# within the square brackets.
+members: [Drishya Prakash, Ajith Sreekumar, Deepika Soundar, Z Swetha, Akhil Anil]
+
+# Write your general topic.  
+topic: Turkey Earthquake Data (1994 - 2023)
+
+# Write your research question, following one of the three allowed templates.
+# Be sure your question is all on one line.
+RQ: Is there a correlation between the earthquake magnitude on the Richter scale ('ML') and the depth of the earthquake ('Der(km)')?
+
+# Write your independent and dependent variables.  These should be the
+# column names (reported by R colnames() where these variables are
+# found in your dataset's CSV file.
+# Note: if your question is about comparison of means, medians, or
+# proportions, the independent variable column is the one that
+# contains the values (at least two) that divide the population into
+# subsets.
+independent-var: Earthquake magnitude ('ML')
+dependent-var: Depth ('Der(km)')
+
+# Write the null hypothesis for your research question, again ensuring it is all on one line.
+null-hypothesis: There is no correlation between earthquake magnitude on the Richter scale and earthquake depth.
+
+# Write the alternative hypothesis for your research question, again ensuring it is all on one line.
+alt-hypothesis: There is a correlation between earthquake magnitude on the Richter scale and earthquake depth.
+
+# Write the dataset ID (KNNN):
+dataset-id: DS023
+
+# Write the dataset URL.  
+dataset-url: https://www.kaggle.com/datasets/ozgecinko/turkey-earthquake-data-1914-2023
+
+# Write the dataset CSV filename, exactly as it appears on the Sharepoint list
+# (which should be the same as the one in your repository!)
+dataset-file: veriler.csv
+
+# Paste the output of loading your dataset into R, and executing the
+# colnames() function, into the space below the `columns: |` line.
+# Put two spaces *before* every line you pasted.
+columns: |
+  > d<-read.csv("veriler.csv")
+  > colnames(d)
+  [1] "No"          "Deprem Kodu" "Olus tarihi" "Olus zamani"
+  [5] "Enlem"       "Boylam"      "Der(km)"     "xM"         
+  [9] "MD"          "ML"          "Mw"          "Ms"         
+  [13] "Mb"          "Tip"         "Yer"   
