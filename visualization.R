@@ -51,6 +51,5 @@ ggplot(data_filtered, aes(x = ML)) +
   ) +
   theme_minimal()
 
-# Close the PDF device
 dev.off()
 
